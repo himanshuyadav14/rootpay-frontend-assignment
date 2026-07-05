@@ -24,7 +24,6 @@ interface WizardContextValue {
 
 const WizardContext = createContext<WizardContextValue | null>(null);
 
-const TOTAL_STEPS = 5;
 
 export const WizardProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [step, setStep] = useState(1);
