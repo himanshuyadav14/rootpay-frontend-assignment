@@ -43,7 +43,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ value, onChange, length = 4 }) => {
   };
 
   return (
-    <div className="flex gap-3" role="group" aria-label="OTP input">
+    <div className="flex gap-2 sm:gap-3" role="group" aria-label="OTP input">
       {Array.from({ length }).map((_, i) => (
         <input
           key={i}
@@ -58,7 +58,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ value, onChange, length = 4 }) => {
           onPaste={handlePaste}
           onFocus={(e) => e.target.select()}
           className="
-            otp-input w-12 h-12 text-center text-lg font-semibold text-gray-900
+            otp-input w-11 h-11 sm:w-12 sm:h-12 text-center text-lg font-semibold text-gray-900
             border border-gray-300 rounded-lg outline-none
             focus:ring-2 focus:ring-blue-500 focus:border-blue-500
             transition-all duration-200 bg-white

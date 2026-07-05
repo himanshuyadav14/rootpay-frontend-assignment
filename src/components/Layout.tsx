@@ -9,7 +9,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     /* ── Page: dark navy background ── */
     <div
-      className="min-h-screen w-full flex items-center justify-center p-6 lg:p-10"
+      className="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-10"
       style={{ backgroundColor: '#0F1B3C' }}
     >
       {/* ── Big grey container ── */}
@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         className="w-full max-w-[1100px] rounded-2xl flex overflow-hidden shadow-2xl"
         style={{ backgroundColor: '#F3F4F6', minHeight: '620px' }}
       >
-        {/* ── Left: grey, text + illustration ── */}
+        {/* ── Left: only on lg+ ── */}
         <div
           className="hidden lg:flex lg:w-[48%] flex-col justify-between p-12 xl:p-14"
           style={{ backgroundColor: '#F3F4F6' }}
@@ -46,14 +46,27 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         </div>
 
-        {/* ── Right: grey bg + white card filling full height ── */}
+        {/* ── Right panel ── */}
         <div
-          className="flex-1 flex items-stretch p-6 sm:p-8 xl:p-10"
+          className="flex-1 flex flex-col items-stretch p-4 sm:p-6 lg:p-8 xl:p-10"
           style={{ backgroundColor: '#F3F4F6' }}
         >
-          {/* White card - full height of right panel, no border */}
+          {/* Mobile-only header */}
+          <div className="lg:hidden mb-5 pt-2">
+            <p className="text-gray-400 text-xs font-medium mb-1 tracking-wide">
+              Let's get started
+            </p>
+            <h1 className="text-gray-900 text-2xl font-bold leading-tight">
+              Create your account
+            </h1>
+            <p className="text-gray-500 text-xs mt-1">
+              Follow the steps to create your account
+            </p>
+          </div>
+
+          {/* White card */}
           <div
-            className="w-full rounded-2xl bg-white p-8 sm:p-10 flex flex-col"
+            className="w-full flex-1 rounded-2xl bg-white p-5 sm:p-7 lg:p-8 xl:p-10 flex flex-col"
             style={{
               boxShadow: '0 8px 32px 0 rgba(0,0,0,0.12), 0 2px 8px 0 rgba(0,0,0,0.06)',
             }}

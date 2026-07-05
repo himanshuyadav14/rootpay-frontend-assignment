@@ -91,6 +91,25 @@ WizardContext (step: 1–5, data: WizardData)
 
 ---
 
+## Responsive Design
+
+The app is fully responsive across all screen sizes:
+
+| Breakpoint | Behavior |
+|------------|----------|
+| **Mobile** (`< lg`) | Left illustration panel hidden. "Create your account" heading shown above the card. Full-width white card with compact padding. |
+| **Tablet** (`sm–lg`) | Single-column layout, card fills available height. |
+| **Desktop** (`lg+`) | Two-column layout: illustration left, form card right — matches Figma exactly. |
+
+Key responsive decisions:
+- `hidden lg:flex` on the left panel — illustration hidden on small screens to maximize form space
+- Mobile-only `<div>` above the card shows the page title/subtitle
+- OTP boxes: `w-11 h-11` on mobile → `w-12 h-12` on desktop
+- Container padding: `p-4` mobile → `p-10` desktop
+- Card padding: `p-5` mobile → `p-10` desktop
+
+---
+
 ## Design Decisions
 
 1. **No router** — The 5-step flow is purely sequential; React Context is simpler and avoids URL noise for an onboarding wizard.
