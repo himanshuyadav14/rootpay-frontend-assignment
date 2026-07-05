@@ -4,7 +4,7 @@ A pixel-accurate React + TypeScript implementation of the RootPay account creati
 
 ## Live Demo
 
-> _Deployed on Vercel — link will be updated after deployment_
+🔗 **[https://rootpay-frontend-assignment.vercel.app](https://rootpay-frontend-assignment.vercel.app)**
 
 ## GitHub Repository
 
